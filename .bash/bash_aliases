@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+#SSH Aliases
+alias ssh-hal="ssh autorefactorer.com"
+alias ssh-wedding="ssh alisonmichaelwedding.com"
+alias ssh-diannao="ssh DianNao"
+
+alias spacemacs="emacs"

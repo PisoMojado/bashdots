@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# This file is for holding temporary changes I'd like to apply to my bash environment
+if [ -r ~/Code/torch-distro/install/bin/torch-activate ]
+then
+    . /Users/michael/Code/torch-cl/install/bin/torch-activate
+#    . /Users/michael/Code/torch-distro/install/bin/torch-activate
+fi
+

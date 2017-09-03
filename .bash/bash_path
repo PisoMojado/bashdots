@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+# Add android SDK to PATH
+ANDROID_SDK="/Users/michael/Library/Android/sdk/platform-tools"
+if [ -d "${ANDROID_SDK}" ] 
+then
+    PATH="${ANDROID_SDK}:${PATH}"
+fi
+
+# Add Python 3.5 to PATH
+PYTHON3_BIN="/Library/Frameworks/Python.framework/Versions/3.5/bin"
+if [ -d "${PYTHON3_BIN}" ]
+then    
+    PATH="${PYTHON3_BIN}:${PATH}"
+fi
+
+# Add MacPorts Directories to PATH
+MACPORTS_BIN="/opt/local/bin"
+if [ -d "${MACPORTS_BIN}" ]
+then    
+    PATH="${MACPORTS_BIN}:${PATH}"
+fi
+
+MACPORTS_SBIN="/opt/local/sbin"
+if [ -d "${MACPORTS_SBIN}" ]
+then    
+    PATH="${MACPORTS_SBIN}:${PATH}"
+fi
+
+# Add user-local bin to path
+USERLOCAL_BIN="${HOME}/.local/bin"
+if [ -d "${USERLOCAL_BIN}" ]
+then
+    PATH="${USERLOCAL_BIN}:${PATH}"
+fi
+
+export PATH
