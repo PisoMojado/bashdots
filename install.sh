@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BASH_DOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BASH_DOT_DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 which stow
 if [ $? = 0 ]
