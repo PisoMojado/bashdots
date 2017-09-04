@@ -2,6 +2,10 @@
 
 BASH_DOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-ln -s "${BASH_DOT_DIR}/.bash" "${HOME}/"
-ln -s "${BASH_DOT_DIR}/.bashrc" "${HOME}/"
-ln -s "${BASH_DOT_DIR}/.bash_profile" "${HOME}/"
+which stow
+if [ $? = 0 ]
+then
+    stow -d ${BASH_DOT_DIR} -t ${HOME} bash
+else
+    echo "Please install stow before installation"
+fi
