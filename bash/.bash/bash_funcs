@@ -1,2 +1,26 @@
 #!/usr/bin/env bash
 
+
+activate-conda(){
+    if [ -z "${CONDA_PATH}" ]
+    then
+        export CONDA_PATH="/usr/local/miniconda3/bin"
+        export ORIGINAL_PATH="${PATH}"
+        export PATH="${CONDA_PATH}:${PATH}"
+	echo "Conda has been activated"
+    else
+        echo "Conda already activated"
+    fi
+}
+
+deactivate-conda(){
+    if [ ! -z "${CONDA_PATH}" ]
+    then
+        export CONDA_PATH=""
+        export PATH="${ORIGINAL_PATH}"
+        export ORIGINAL_PATH=""
+        echo "Conda has been deactivated"
+    else
+        echo "Conda is not active"
+    fi
+}
