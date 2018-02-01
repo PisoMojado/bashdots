@@ -2,7 +2,7 @@
 
 
 activate-conda(){
-    if [ -z "${CONDA_PATH}" ]
+    if [ -z "${ADNOC_PATH}" ]
     then
         export ADNOC_PATH="/usr/local/miniconda3/bin"
         export ORIGINAL_PATH="${PATH}"
@@ -22,5 +22,26 @@ deactivate-conda(){
         echo "Conda has been deactivated"
     else
         echo "Conda is not active"
+    fi
+}
+
+ar(){
+    activate-conda
+    if [ -z ${ADNOC_PATH} ]
+    then
+        echo "Can't activate research environment"
+    else
+        source activate research
+        export PS1="╭ \033[01;33m\]\u\033[01;31m\]♖ \033[01;32m\]\h\033[00m\]:\033[01;34m\]\w\033[00m\] (research)\n╰> "
+    fi
+}
+
+dr(){
+    source deactivate
+    if [ $? -eq 0 ]
+    then
+        deactivate-conda
+    else
+        echo "No research environment to deactivate"
     fi
 }
