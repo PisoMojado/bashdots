@@ -6,3 +6,5 @@ alias ssh-wedding="ssh alisonmichaelwedding.com"
 alias ssh-diannao="ssh DianNao"
 
 alias spacemacs="emacs"
+
+alias jn="jupyter-notebook"
