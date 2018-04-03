@@ -32,7 +32,7 @@ ar(){
         echo "Can't activate research environment"
     else
         source activate research
-        export PS1="╭ \033[01;33m\]\u\033[01;31m\]♖ \033[01;32m\]\h\033[00m\]:\033[01;34m\]\w\033[00m\] (research)\n╰> "
+	export PS1="╭ \033[01;33m\]\u\033[01;31m\]♖ \033[01;32m\]\h\033[00m\]:\033[01;34m\]\w\033[01;35m\]$(__git_ps1 " (%s)")\033[00m\] (research)\n╰> "
     fi
 }
 
