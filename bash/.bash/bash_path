@@ -1,17 +1,10 @@
 #!/usr/bin/env bash
 
 # Add android SDK to PATH
-ANDROID_SDK="/Users/michael/Library/Android/sdk/platform-tools"
+ANDROID_SDK="${HOME}/Library/Android/sdk/platform-tools"
 if [ -d "${ANDROID_SDK}" ] 
 then
     PATH="${ANDROID_SDK}:${PATH}"
-fi
-
-# Add Python 3.5 to PATH
-PYTHON3_BIN="/Library/Frameworks/Python.framework/Versions/3.5/bin"
-if [ -d "${PYTHON3_BIN}" ]
-then    
-    PATH="${PYTHON3_BIN}:${PATH}"
 fi
 
 # Add MacPorts Directories to PATH
