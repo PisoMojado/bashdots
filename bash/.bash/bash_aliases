@@ -12,4 +12,8 @@ alias jn="jupyter-notebook"
 #Fasd aliases
 eval "$(fasd --init auto)"
 
+#Alias for my go command for added laziness
 alias g=go
+
+#Alias for restart-chunk command for added laziness
+alias rc=restart-chunk

@@ -76,3 +76,7 @@ go() {
         echo "Ran out of things to do with '$1'"
     fi
 }
+
+restart-chunk() {
+    launchctl unload ~/Library/LaunchAgents/com.koekeishiya.chunkwm.plist && launchctl load ~/Library/LaunchAgents/com.koekeishiya.chunkwm.plist 
+}
