@@ -11,3 +11,5 @@ alias jn="jupyter-notebook"
 
 #Fasd aliases
 eval "$(fasd --init auto)"
+
+alias g=go
