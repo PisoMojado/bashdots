@@ -8,7 +8,6 @@ alias ssh-diannao="ssh DianNao"
 alias spacemacs="emacs"
 
 alias jn="jupyter-notebook"
-alias jl="jupyter lab"
 
 #Fasd aliases
 eval "$(fasd --init auto)"
